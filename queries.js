@@ -1,4 +1,4 @@
-import pool from './db'
+import pool from './db.js'
 
 // Fetch all departments 
 const getDepartments = async () => {
