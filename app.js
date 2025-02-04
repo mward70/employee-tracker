@@ -1,13 +1,10 @@
-import inquirer from "inquirer";
-import pg from 'pg';
-
 import { 
     mainMenu, 
     departmentPrompt, 
     rolePrompt, 
     employeePrompt, 
     updateEmployeeRolePrompt 
-} from "./prompts";
+} from "./prompts.js";
 
 import { 
     getDepartments, 
@@ -17,7 +14,7 @@ import {
     addRole, 
     addEmployee, 
     updateEmployeeRole 
-} from "./queries";
+} from "./queries.js";
 
 const startApp = async () => {
     let running = true;
