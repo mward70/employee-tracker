@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "A command-line application to manage a company's employee database using Node.js, Inquirer, and PostgreSQL.",
     "main": "app.js",
+    "type": "module",
     "scripts": {
       "start": "node app.js",
       "dev": "nodemon app.js",
