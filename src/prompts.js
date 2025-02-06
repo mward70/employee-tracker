@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 
-const mainMenu = () => {
-    return inquirer.prompt([
+export const mainMenu = async () => {
+    return await inquirer.prompt([
         {
             type: "list",
             name: "action",

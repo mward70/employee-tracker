@@ -2,13 +2,8 @@ import pool from './db.js'
 
 // Fetch all departments 
 const getDepartments = async () => {
-    try {
-        const res = await pool.query("SELECT * FROM department");
-        console.table(res.rows);
+        const res = await pool.query("SELECT * FROM department ORDER BY id");
         return res.rows; 
-    } catch (error) {
-        console.error("Error fetching departments:", error);
-    }
 };
 
 // Fetch all employees
@@ -23,7 +18,6 @@ const getEmployees = async () => {
             JOIN department ON role.department_id = department.id
             LEFT JOIN employee AS manager ON employee.manager_id = manager.id
         `);
-        console.table(res.rows);
         return res.rows;
     } catch (error) {
         console.error("Error fetching employees:", error);
@@ -38,7 +32,6 @@ const getRoles = async () => {
             FROM role 
             JOIN department ON role.department_id = department.id
         `);
-        console.table(res.rows);
         return res.rows;
     } catch (error) {
         console.error("Error fetching roles:", error);
